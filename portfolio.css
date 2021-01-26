@@ -24,7 +24,7 @@ html {
   box-sizing: border-box;
   /* Default font size is 16px
    * If we want a font size of 10px we can do ( 10 / 16 ) * 100 = 62.5%
-   * Then later whenever we want a specific font size we can now multiply by rem values (e.g. 1.6rem = 1.6 x 10px = 16px)
+   * Then later whenever we want a specific font size we can now multiply by rem values        * (e.g. 1.6rem = 1.6 x 10px = 16px)
   */
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -71,6 +71,7 @@ h2 {
 #h1-nav,
 #h2-nav {
   text-align: left;
+  line-height: 1.2;
 }
 
 #h1-nav {
@@ -147,4 +148,24 @@ img {
 
 .nav-list a:hover {
   color: var(--main-blue);
+}
+
+/* Welcome section */
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.welcome-section > p {
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-orange);
 }
