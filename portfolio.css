@@ -1,0 +1,149 @@
+/* Custom properties/variables - colours */
+:root {
+  --main-white: #f0f0f0;
+  --main-gray: #303841;
+  --main-blue: #45567d;
+  --main-orange: #F05837;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /* Default font size is 16px
+   * If we want a font size of 10px we can do ( 10 / 16 ) * 100 = 62.5%
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* 1200 px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 500px / 16px = 31.25em */
+@media (max-width: 31.25em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Base styles */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-white);
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+#h1-nav,
+#h2-nav {
+  text-align: left;
+}
+
+#h1-nav {
+  font-size: 5rem;
+}
+
+#h2-nav {
+  font-size: 2.25rem;
+  color: var(--main-gray);
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* nav */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-orange);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.logo {
+  padding: 0 2rem;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+
+@media (max-width: 50em) {
+  .navbar {
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .nav-list {
+    margin: 10px 0px;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a:hover {
+  color: var(--main-blue);
+}
